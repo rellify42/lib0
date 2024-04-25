@@ -1,6 +1,6 @@
 {
-  "name": "lib0",
-  "version": "0.2.93",
+  "name": "@rellify42/lib0",
+  "version": "0.2.93b",
   "description": "",
   "sideEffects": false,
   "type": "module",
@@ -508,9 +508,12 @@
     "postpublish": "npm run clean",
     "gentesthtml": "node ./bin/gentesthtml.js --script test.js > test.html"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dmonad/lib0.git"
+    "url": "https://github.com/rellify42/y-webrtc.git"
   },
   "author": "Kevin Jahns <kevin.jahns@protonmail.com>",
   "license": "MIT",

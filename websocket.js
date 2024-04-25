@@ -20,9 +20,15 @@ const messageReconnectTimeout = 30000
 /**
  * @param {WebsocketClient} wsclient
  */
-const setupWS = (wsclient) => {
+const setupWS = async (wsclient) => {
   if (wsclient.shouldConnect && wsclient.ws === null) {
-    const websocket = new WebSocket(wsclient.url)
+    let url = wsclient.url;
+    if (wsclient.getQueryParameters) {
+      const queryParameters = await wsclient.getQueryParameters();
+      url += queryParameters;
+    }
+
+    const websocket = new WebSocket(url)
     const binaryType = wsclient.binaryType
     /**
      * @type {any}
@@ -95,10 +101,12 @@ export class WebsocketClient extends Observable {
    * @param {string} url
    * @param {object} opts
    * @param {'arraybuffer' | 'blob' | null} [opts.binaryType] Set `ws.binaryType`
+   * @param {() => Promise<string>} [opts.getQueryParameters]
    */
-  constructor (url, { binaryType } = {}) {
+  constructor (url, { binaryType, getQueryParameters } = {}) {
     super()
     this.url = url
+    this.getQueryParameters = getQueryParameters
     /**
      * @type {WebSocket?}
      */

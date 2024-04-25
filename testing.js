@@ -3,12 +3,12 @@
  *
  * ```js
  * // test.js template for creating a test executable
- * import { runTests } from 'lib0/testing'
- * import * as log from 'lib0/logging'
+ * import { runTests } from '@rellify42/lib0/testing'
+ * import * as log from '@rellify42/lib0/logging'
  * import * as mod1 from './mod1.test.js'
  * import * as mod2 from './mod2.test.js'
 
- * import { isBrowser, isNode } from 'lib0/environment.js'
+ * import { isBrowser, isNode } from '@rellify42/lib0/environment.js'
  *
  * if (isBrowser) {
  *   // optional: if this is ran in the browser, attach a virtual console to the dom
@@ -43,7 +43,7 @@
  * @module testing
  */
 
-import * as log from 'lib0/logging'
+import * as log from '@rellify42/lib0/logging'
 import { simpleDiffString } from './diff.js'
 import * as object from './object.js'
 import * as string from './string.js'
@@ -56,7 +56,7 @@ import * as env from './environment.js'
 import * as json from './json.js'
 import * as time from './time.js'
 import * as promise from './promise.js'
-import * as performance from 'lib0/performance'
+import * as performance from '@rellify42/lib0/performance'
 
 export { production } from './environment.js'
 

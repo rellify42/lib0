@@ -4,7 +4,7 @@
 
 import * as encoding from '../encoding.js'
 import * as decoding from '../decoding.js'
-import * as webcrypto from 'lib0/webcrypto'
+import * as webcrypto from '@rellify42/lib0/webcrypto'
 import * as string from '../string.js'
 export { exportKeyJwk, exportKeyRaw } from './common.js'
 

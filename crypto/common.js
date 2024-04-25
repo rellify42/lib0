@@ -1,4 +1,4 @@
-import * as webcrypto from 'lib0/webcrypto'
+import * as webcrypto from '@rellify42/lib0/webcrypto'
 
 /**
  * @param {CryptoKey} key

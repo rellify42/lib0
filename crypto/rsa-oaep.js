@@ -2,7 +2,7 @@
  * RSA-OAEP is an asymmetric keypair used for encryption
  */
 
-import * as webcrypto from 'lib0/webcrypto'
+import * as webcrypto from '@rellify42/lib0/webcrypto'
 export { exportKeyJwk } from './common.js'
 
 /**

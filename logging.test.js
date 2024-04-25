@@ -1,4 +1,4 @@
-import * as log from 'lib0/logging'
+import * as log from '@rellify42/lib0/logging'
 
 export const testLogging = () => {
   log.print(log.BLUE, 'blue ')

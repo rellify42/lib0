@@ -2,7 +2,7 @@
  * ECDSA is an asymmetric key for signing
  */
 
-import * as webcrypto from 'lib0/webcrypto'
+import * as webcrypto from '@rellify42/lib0/webcrypto'
 export { exportKeyJwk, exportKeyRaw } from './common.js'
 
 /**

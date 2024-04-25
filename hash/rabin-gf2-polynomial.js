@@ -10,7 +10,7 @@
  */
 
 import * as math from '../math.js'
-import * as webcrypto from 'lib0/webcrypto'
+import * as webcrypto from '@rellify42/lib0/webcrypto'
 import * as array from '../array.js'
 import * as buffer from '../buffer.js'
 

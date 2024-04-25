@@ -4,7 +4,7 @@ import * as path from 'path'
 import * as fs from 'fs'
 import * as env from '../environment.js'
 import * as number from '../number.js'
-import * as logging from 'lib0/logging'
+import * as logging from '@rellify42/lib0/logging'
 
 const host = env.getParam('--host', 'localhost')
 const port = number.parseInt(env.getParam('--port', '8000'))
